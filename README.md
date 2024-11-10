@@ -69,7 +69,7 @@ Publish the website in the given URL.
             <article class="column">
                 <h3>Our New Menu</h3>
                 <img src="kunafa.jpeg" alt="New Menu">
-                <p>Crispy sweety kunafa</p>
+                <p>Crispy sweet kunafa</p>
                 <a href="#">See our new menu</a>
             </article>
 
@@ -103,143 +103,153 @@ Publish the website in the given URL.
 ```
 ### CSS
 ```CSS
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc00;
+    padding: 1rem 2rem;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #666;
+}
+
+/* Promo Banner */
+.promo-banner {
+    background-color: #ff6600;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.promo-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.promo-banner p {
+    font-size: 1.2rem;
+}
+
+/* Main Content - Columns */
+.content-columns {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.content-columns .column {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.content-columns .column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.content-columns .column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-columns .column p {
+    margin-bottom: 0.5rem;
+}
+
+.content-columns .column a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.content-columns .column a:hover {
     color: #333;
 }
 
-header, footer {
-    background-color: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    padding: 20px;
-}
-
-.logo img {
-    max-width: 60px; 
-    height: auto;
-}
-
-
-nav {
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px; 
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    flex: none; 
-}
-
-nav a {
-    display: block;
-    text-decoration: none;
-    color: #fff; 
-    padding: 10px 20px;
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
+/* Footer */
+footer {
     background-color: #333;
-}
-
-header {
-    width: 100%;
-}
-
-main {
-    padding: 20px;
-}
-
-.promo-banner {
-    background: url("wal.jpeg") center/cover no-repeat;
     color: #fff;
     text-align: center;
-    padding: 50px 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-.content-columns {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+footer .footer-logo img {
+    height: 40px;
 }
 
-.column {
-    flex: 1;
-    background-color: #7cffda;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+footer .footer-text p {
+    margin-top: 0.5rem;
 }
 
-.column img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
+/* Responsive */
+@media (max-width: 768px) {
+    .content-columns {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.column h3 {
-    margin-top: 10px;
-    font-size: 1.2em;
-}
+    .content-columns .column {
+        width: 80%;
+    }
 
-.column a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #0066cc;
-    transition: color 0.3s;
-}
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-.column a:hover {
-    color: #004d99;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.footer-logo img {
-    width: 30px;
-}
-
-.footer-text {
-    display: flex;
-    align-items: center;
-    color: #777;
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
 ```
 
 ## OUTPUT:
-
-![Screenshot 2024-10-18 134652](https://github.com/user-attachments/assets/cfe993f2-18e1-4772-a6f9-d4002f3c87c5)
-
-![Screenshot 2024-10-18 134754](https://github.com/user-attachments/assets/f0fd4848-cdeb-477c-8c6f-a8a283392305)
+![Screenshot 2024-11-11 000304](https://github.com/user-attachments/assets/908c816c-7c10-40fc-9c8a-a27cf4b80531)
+![Screenshot 2024-11-11 000314](https://github.com/user-attachments/assets/515c9df0-b234-4da3-9c3d-2bd69a0a8096)
 
 
 ## RESULT:
